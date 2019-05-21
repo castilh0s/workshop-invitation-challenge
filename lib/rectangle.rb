@@ -4,13 +4,17 @@ class Rectangle < GeometricBase
   attr_writer :height, :width
 
   def initialize(height, width)
+    @height = height
+    @width = width
   end
 
   def area
-    0
+    multiply(@height, @width)
   end
 
   def perimeter
-    0
+    doubleHeight = multiply(@height, 2)
+    doubleWidth = multiply(@width, 2)
+    sum(doubleHeight, doubleWidth)
   end
 end
